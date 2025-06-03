@@ -1,0 +1,8 @@
+.MainContent {
+    background-color: #041644;
+    display: flex;
+    gap: 20px;
+    min-height: 100vh;
+    margin: 0 auto;
+    width: 80%
+}
