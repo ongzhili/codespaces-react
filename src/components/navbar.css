@@ -1,0 +1,8 @@
+.Navbar {
+    background-color: aqua;
+    display: flex;
+};
+
+.NavbarElement {
+  padding: 40;  
+};
