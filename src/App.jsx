@@ -1,10 +1,12 @@
 import './App.css';
 import Navbar from './components/navbar.jsx'
+import BGContainer from './components/background';
 
 function App() {
   return (
     <div className="App">
       <Navbar />
+      <BGContainer />
       <header className="App-header">
         <img src="Octocat.png" className="App-logo" alt="logo" />
         <p>
