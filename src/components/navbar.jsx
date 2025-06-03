@@ -11,8 +11,14 @@ export default function Navbar() {
 
 export function NavbarElement({children}) {
     return (
-        <a className="NavbarElement">
-            {children}            
-        </a>
+        <div className="NavbarElement" onClick={handleClick}>
+            <a>
+                {children}            
+            </a>
+        </div>
     );
+}
+
+function handleClick() {
+    alert("clicked!");
 }
