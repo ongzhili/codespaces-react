@@ -1,12 +1,25 @@
+import React, { useState } from 'react';
 import './navbar.css';
 
 export default function Navbar() {
+    const [open, setOpen] = useState(false);
+
+    const handleHamburgerClick = () => setOpen(!open);
+
     return (
-    <div className="Navbar">
-        <NavbarElement>navbarge</NavbarElement>
-        <NavbarElement>navbarb</NavbarElement>
-        <NavbarElement>navbarc</NavbarElement>
-    </div>);
+        <div className="Navbar">
+            <div className="hamburger" onClick={handleHamburgerClick}>
+                <span />
+                <span />
+                <span />
+            </div>
+            <div className={`NavbarElements${open ? ' open' : ''}`}>
+                <NavbarElement>navbarge</NavbarElement>
+                <NavbarElement>navbarb</NavbarElement>
+                <NavbarElement>navbarc</NavbarElement>
+            </div>
+        </div>
+    );
 }
 
 export function NavbarElement({children}) {

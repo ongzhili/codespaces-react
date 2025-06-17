@@ -1,28 +1,76 @@
+/* ...existing code... */
 .Navbar {
-    background-color: #353e4d;
+    background-color: #0a1931; /* dark navy blue */
     display: flex;
     gap: 20px;
     min-height: 5vh;
+    align-items: center;
+    padding: 0 16px;
+    position: relative;
 }
 
 .NavbarElement {
   margin: 10px;
   padding: 5px;
   justify-self: center;
-  background-color: #4e5c73;
+  background-color: #11204d;
   border-radius: 5px;
 }
 
 .NavbarElement > a {
-  padding:2px;
+  padding: 2px;
   user-select: none;
   font-size: 20px;
-  color: white;
+  color: #f5f9ff;
+  text-decoration: none;
 }
 
-.Navbar > Dropdown > Dropdown.Toggle {
-  padding:2px;
-  user-select: none;
-  font-size: 20px;
-  color: white;
-};
+.NavbarElements {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: #f5f9ff;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.4s;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .Navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    min-height: unset;
+  }
+  .NavbarElements {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+  }
+  .NavbarElements.open {
+    display: flex;
+  }
+  .NavbarElement {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    border-bottom: 1px solid #11204d;
+  }
+  .hamburger {
+    display: flex;
+  }
+}
