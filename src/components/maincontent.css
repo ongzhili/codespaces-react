@@ -7,6 +7,13 @@
     width: 80%
 }
 
+.MainContent > .mdContainer{
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
 .markdown-body {
     background: transparent !important;
     text-align: left;

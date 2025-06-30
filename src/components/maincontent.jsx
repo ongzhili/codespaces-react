@@ -14,7 +14,7 @@ export default function MainContent() {
 
     return (
         <div className="MainContent">
-            <div className="markdown-body">
+            <div className="mdContainer markdown-body">
             <ReactMarkdown>{markdown}</ReactMarkdown>
             </div>
         </div>

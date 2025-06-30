@@ -1,6 +1,6 @@
 # #hello-world.md
 
-Hi, you may know me as Zhi Li (or [Dawnwing](https://osu.ppy.sh/users/5144534)). As of creating this post, I just finished my 3rd year of schooling in NUS, pursuing a Bachelors in Computer Science.
+Hi, you may know me as **Zhi Li (or [Dawnwing](https://osu.ppy.sh/users/5144534)).** As of creating this post, I just finished my 3rd year of schooling in NUS, pursuing a Bachelors in Computer Science.
 
 This website was made to be a hub of sorts, just for me to publish my thoughts, and as a host for various tools and projects that I will work on. So do look forward to some exciting things in the coming years.
 

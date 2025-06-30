@@ -9,7 +9,7 @@ export default function Navbar() {
     return (
         <>
             <div className="Navbar">
-                <span className="navbar-title">Ong Zhi Li's Page</span>
+                <a className="navbar-title" href="/">Ong Zhi Li's Page</a>
                 <div className="spacer" />
                 <div className="hamburger" onClick={handleHamburgerClick}>
                     <span />
