@@ -6,3 +6,18 @@
     margin: 0 auto;
     width: 80%
 }
+
+.markdown-body {
+    background: transparent !important;
+    text-align: left;
+    padding: 0;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+    text-align: center;
+}

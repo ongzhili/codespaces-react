@@ -7,18 +7,22 @@ export default function Navbar() {
     const handleHamburgerClick = () => setOpen(!open);
 
     return (
-        <div className="Navbar">
-            <div className="hamburger" onClick={handleHamburgerClick}>
-                <span />
-                <span />
-                <span />
+        <>
+            <div className="Navbar">
+                <span className="navbar-title">Ong Zhi Li's Page</span>
+                <div className="spacer" />
+                <div className="hamburger" onClick={handleHamburgerClick}>
+                    <span />
+                    <span />
+                    <span />
+                </div>
+                <div className={`NavbarElements${open ? ' open' : ''}`}>
+                    <NavbarElement>navbarge</NavbarElement>
+                    <NavbarElement>navbarb</NavbarElement>
+                    <NavbarElement>navbarc</NavbarElement>
+                </div>
             </div>
-            <div className={`NavbarElements${open ? ' open' : ''}`}>
-                <NavbarElement>navbarge</NavbarElement>
-                <NavbarElement>navbarb</NavbarElement>
-                <NavbarElement>navbarc</NavbarElement>
-            </div>
-        </div>
+        </>
     );
 }
 
