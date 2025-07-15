@@ -17,7 +17,7 @@ function App() {
       <div className="App">
         <Navbar />
         <BGContainer />
-        <div style={{ display: 'flex' }}>
+        <div className="mainLayout">
           <Sidebar />
           <Routes>
             <Route path="/" element={<MainContent url='/src/content/articles/welcomepage.md'/>} />

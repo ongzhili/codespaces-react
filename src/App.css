@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: rgb(91, 89, 94);
+  background-color: #223138;
 }
 
 .App-header {
@@ -12,6 +12,13 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.mainLayout {
+    display: flex;
+    width: 95%;
+    margin: 0 auto;
+    min-height: 100vh;
 }
 
 .small {
