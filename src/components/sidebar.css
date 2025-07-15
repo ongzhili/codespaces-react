@@ -1,0 +1,27 @@
+.SidebarTree {
+    list-style: none;
+    padding-left: 1em;
+}
+
+.SidebarFolder {
+    font-weight: bold;
+    margin-top: 0.5em;
+}
+
+.SidebarFolderName {
+    cursor: pointer;
+}
+
+.SidebarFile {
+    font-weight: normal;
+    margin-left: 1em;
+}
+
+.Sidebar ul {
+    text-align: left;
+    padding-left: 1em;
+}
+
+.Sidebar li {
+    text-align: left;
+}

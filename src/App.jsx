@@ -2,7 +2,14 @@ import './App.css';
 import Navbar from './components/navbar.jsx'
 import BGContainer from './components/background';
 import MainContent from './components/maincontent';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useParams } from 'react-router-dom';
+import Sidebar from './components/sidebar';
+
+function MainContentWrapper() {
+    const { filePath } = useParams();
+    const url = `https://raw.githubusercontent.com/ongzhili/Study-Notes/main/${filePath}`;
+    return <MainContent url={url} />;
+}
 
 function App() {
   return (
@@ -10,11 +17,13 @@ function App() {
       <div className="App">
         <Navbar />
         <BGContainer />
-        <Routes>
-          <Route path="/" element={<MainContent />} />
-          {/* Add more routes here, e.g.: */}
-          {/* <Route path="/about" element={<About />} /> */}
-        </Routes>
+        <div style={{ display: 'flex' }}>
+          <Sidebar />
+          <Routes>
+            <Route path="/" element={<MainContent url='/src/content/articles/welcomepage.md'/>} />
+            <Route path="/view/:filePath" element={<MainContentWrapper />} />
+          </Routes>
+        </div>
       </div>
     </Router>
   );
