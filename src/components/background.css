@@ -1,6 +1,6 @@
 .BGContainer {
     background-color: #d3d5da;
     display: flex;
-    gap: 20px;
+    gap: px;
     min-height: 40vh;
 }
