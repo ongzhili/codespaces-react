@@ -5,6 +5,23 @@ import "./sidebar.css";
 const GITHUB_API_URL =
     "https://api.github.com/repos/ongzhili/Study-Notes/contents/";
 
+const LOGO_URL = "src/content/images/portrait.png"
+
+function SocialLinks() { // CHANGED
+    return ( // CHANGED
+        <div className="SidebarSocials">
+            <a href="https://github.com/ongzhili" target="_blank" rel="noopener noreferrer">
+                <img src="src/content/images/github-mark-white.svg" alt="GitHub" className="SidebarSocialIcon" />
+            </a>
+            <a href="https://www.linkedin.com/in/ong-zhili/" target="_blank" rel="noopener noreferrer">
+                <img src="src/content/images/linkedin.png" alt="LinkedIn" className="SidebarSocialIcon" />
+            </a>
+            {/* Add more socials as needed */}
+        </div>
+    );
+} // CHANGED
+
+
 async function fetchTree(url) {
     const res = await fetch(url);
     const data = await res.json();
@@ -54,6 +71,10 @@ export default function Sidebar() {
 
     return (
         <div className="Sidebar">
+            <div className="SidebarProfile"> 
+                <img src={LOGO_URL} alt="Logo" className="SidebarLogo" /> 
+                <SocialLinks /> 
+            </div> 
             <h3>Study Notes</h3>
             <Tree nodes={tree} />
         </div>
