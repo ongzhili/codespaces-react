@@ -5,7 +5,7 @@ import "./sidebar.css";
 const GITHUB_API_URL =
     "https://api.github.com/repos/ongzhili/Study-Notes/contents/";
 
-const LOGO_URL = "content/images/portrait.png"
+const LOGO_URL = `${import.meta.env.BASE_URL}content/images/portrait.png`;
 
 function SocialLinks() { // CHANGED
     return ( // CHANGED
@@ -72,7 +72,7 @@ export default function Sidebar() {
     return (
         <div className="Sidebar">
             <div className="SidebarProfile"> 
-                <img src={`${import.meta.env.BASE_URL}LOGO_URL`} alt="Logo" className="SidebarLogo" /> 
+                <img src={LOGO_URL} alt="Logo" className="SidebarLogo" /> 
                 <SocialLinks /> 
             </div> 
             <h3>Study Notes</h3>
