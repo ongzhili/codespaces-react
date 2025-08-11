@@ -17,25 +17,30 @@ export default function Navbar() {
                     <span />
                 </div>
                 <div className={`NavbarElements${open ? ' open' : ''}`}>
-                    <NavbarElement>navbarge</NavbarElement>
-                    <NavbarElement>navbarb</NavbarElement>
-                    <NavbarElement>navbarc</NavbarElement>
+                    <NavbarElement link="/">Study Notes</NavbarElement>
+                    <NavbarElement>More Coming Soon!</NavbarElement>
+                    {/*<NavbarElement>navbarc</NavbarElement> */}
                 </div>
             </div>
         </>
     );
 }
 
-export function NavbarElement({children}) {
+export function NavbarElement({ link, children }) {
+    function handleClick() {
+        alert("Coming Soon!");
+    }
+
     return (
-        <div className="NavbarElement" onClick={handleClick}>
-            <a>
-                {children}            
+        <div className="NavbarElement">
+            <a
+                href={link || "#"}
+                onClick={handleClick}
+                className="NavbarElementLink"
+            >
+                {children}
             </a>
         </div>
     );
-}
 
-function handleClick() {
-    alert("clicked!");
 }
