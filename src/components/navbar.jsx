@@ -17,7 +17,7 @@ export default function Navbar() {
                     <span />
                 </div>
                 <div className={`NavbarElements${open ? ' open' : ''}`}>
-                    <NavbarElement link="/">Study Notes</NavbarElement>
+                    <NavbarElement link={`${import.meta.env.BASE_URL}`}>Study Notes</NavbarElement>
                     <NavbarElement>More Coming Soon!</NavbarElement>
                     {/*<NavbarElement>navbarc</NavbarElement> */}
                 </div>
@@ -33,13 +33,15 @@ export function NavbarElement({ link, children }) {
 
     return (
         <div className="NavbarElement">
-            <a
-                href={link || "#"}
-                onClick={handleClick}
-                className="NavbarElementLink"
-            >
-                {children}
-            </a>
+            {link ? (
+                <a href={link} className="NavbarElementLink">
+                    {children}
+                </a>
+            ) : (
+                <a className="NavbarElementLink" onClick={handleClick}>
+                    {children}
+                </a>
+            )}
         </div>
     );
 
