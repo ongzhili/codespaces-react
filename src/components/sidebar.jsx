@@ -47,7 +47,7 @@ function Tree({ nodes }) {
             {nodes.map((node) =>
                 node.type === "file" ? (
                     <li key={node.path} className="SidebarFile">
-                        <Link to={`/view/${encodeURIComponent(node.path)}`}>
+                        <Link to={`view/${encodeURIComponent(node.path)}`}>
                             {node.name}
                         </Link>
                     </li>

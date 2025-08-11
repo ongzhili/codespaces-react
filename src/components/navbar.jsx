@@ -9,7 +9,7 @@ export default function Navbar() {
     return (
         <>
             <div className="Navbar">
-                <a className="navbar-title" href="/">Ong Zhi Li's Page</a>
+                <a className="navbar-title" href={`${import.meta.env.BASE_URL}`}>Ong Zhi Li's Page</a>
                 <div className="spacer" />
                 <div className="hamburger" onClick={handleHamburgerClick}>
                     <span />

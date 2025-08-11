@@ -13,7 +13,7 @@ function MainContentWrapper() {
 
 function App() {
   return (
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       <div className="App">
         <Navbar />
         <BGContainer />
@@ -21,7 +21,7 @@ function App() {
           <Sidebar />
           <Routes>
             <Route path="/" element={<MainContent url='/src/content/articles/welcomepage.md'/>} />
-            <Route path="/view/:filePath" element={<MainContentWrapper />} />
+            <Route path="view/:filePath" element={<MainContentWrapper />} />
           </Routes>
         </div>
       </div>
