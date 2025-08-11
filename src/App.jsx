@@ -20,7 +20,7 @@ function App() {
         <div className="mainLayout">
           <Sidebar />
           <Routes>
-            <Route path="/" element={<MainContent url={`${import.meta.env.BASE_URL}src/content/articles/welcomepage.md`}/>} />
+            <Route path="/" element={<MainContent url={`${import.meta.env.BASE_URL}public/content/articles/welcomepage.md`}/>} />
             <Route path="view/:filePath" element={<MainContentWrapper />} />
           </Routes>
         </div>
