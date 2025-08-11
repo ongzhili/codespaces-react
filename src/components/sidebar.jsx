@@ -5,16 +5,16 @@ import "./sidebar.css";
 const GITHUB_API_URL =
     "https://api.github.com/repos/ongzhili/Study-Notes/contents/";
 
-const LOGO_URL = "public/content/images/portrait.png"
+const LOGO_URL = "content/images/portrait.png"
 
 function SocialLinks() { // CHANGED
     return ( // CHANGED
         <div className="SidebarSocials">
             <a href="https://github.com/ongzhili" target="_blank" rel="noopener noreferrer">
-                <img src={`${import.meta.env.BASE_URL}public/content/images/github-mark-white.svg`} alt="GitHub" className="SidebarSocialIcon" />
+                <img src={`${import.meta.env.BASE_URL}content/images/github-mark-white.svg`} alt="GitHub" className="SidebarSocialIcon" />
             </a>
             <a href="https://www.linkedin.com/in/ong-zhili/" target="_blank" rel="noopener noreferrer">
-                <img src={`${import.meta.env.BASE_URL}public/content/images/linkedin.png`} alt="LinkedIn" className="SidebarSocialIcon" />
+                <img src={`${import.meta.env.BASE_URL}content/images/linkedin.png`} alt="LinkedIn" className="SidebarSocialIcon" />
             </a>
             {/* Add more socials as needed */}
         </div>
@@ -72,7 +72,7 @@ export default function Sidebar() {
     return (
         <div className="Sidebar">
             <div className="SidebarProfile"> 
-                <img src={LOGO_URL} alt="Logo" className="SidebarLogo" /> 
+                <img src={`${import.meta.env.BASE_URL}LOGO_URL`} alt="Logo" className="SidebarLogo" /> 
                 <SocialLinks /> 
             </div> 
             <h3>Study Notes</h3>
