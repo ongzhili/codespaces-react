@@ -11,10 +11,10 @@ function SocialLinks() { // CHANGED
     return ( // CHANGED
         <div className="SidebarSocials">
             <a href="https://github.com/ongzhili" target="_blank" rel="noopener noreferrer">
-                <img src="src/content/images/github-mark-white.svg" alt="GitHub" className="SidebarSocialIcon" />
+                <img src={`${import.meta.env.BASE_URL}src/content/images/github-mark-white.svg`} alt="GitHub" className="SidebarSocialIcon" />
             </a>
             <a href="https://www.linkedin.com/in/ong-zhili/" target="_blank" rel="noopener noreferrer">
-                <img src="src/content/images/linkedin.png" alt="LinkedIn" className="SidebarSocialIcon" />
+                <img src={`${import.meta.env.BASE_URL}src/content/images/linkedin.png`} alt="LinkedIn" className="SidebarSocialIcon" />
             </a>
             {/* Add more socials as needed */}
         </div>
